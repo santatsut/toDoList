@@ -3,8 +3,12 @@
     padding: 0px;
 }
 
+*:focus {
+    outline: none;
+}
+
 body {
-    background-color: rgba(0, 0, 0, 0.668);
+    background-color: whitesmoke;
 }
 
 #content {
@@ -18,15 +22,20 @@ body {
 
 #content input {
     margin-top: 20px;
-    width: 400px;
-    height: 50px;
-    background-color: rgb(165, 165, 165);
+    width: 390px;
+    height: 40px;
+    background-color: rgb(215, 215, 215);
     border: none;
     border-radius: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: light;
+    padding: 5px;
 }
 
 #inputRow {
     display: block;
+    align-items: center;
 }
 
 #inputRow button {
@@ -37,11 +46,58 @@ body {
     border: none;
 }
 
+a{
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    border-radius: 5px;
+    bottom: 3px;
+  }
+  
+  a span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  a:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ff003b;
+    transition: all .35s;
+  }
+  
+  a:hover{
+    color: #fff;
+  }
+  
+  a:hover:after{
+    width: 100%;
+  }
+  
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+}
+
 #list {
     display: flex;
     position: relative;
     flex-direction: column;
-    background-color: rgb(210, 210, 210);
+    background-color: rgb(255, 255, 255);
     border-radius:10px;
     width: 550px;
     height: 600px;
@@ -50,6 +106,8 @@ body {
     font-size: 24px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+    border: 1px solid black;
+    margin-bottom: 50px;
 }
 
 #list li {
