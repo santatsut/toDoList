@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ToDoList</title>
+</head>
+<body>
+    <div id="content">
+        <h1>To Do List</h1>
+        <div id="inputRow">
+            <input type="text" id="inputBar">
+            <button onclick="addToDo()">add</button>
+            <button onclick="removeToDo()">Remove</button> 
+        </div>
+        <ul id="list">
+        </ul>
+    </div>
+    
+    <script href="script.js">
+        function addToDo() {
+            let input = document.getElementById('inputBar');
+            let inputValue = input.value;
+            if (inputValue != "") {
+                var newToDo = document.createElement('li');
+                const parent = document.querySelector("#list");
+                newToDo.innerHTML = `${inputValue}`;
+                parent.appendChild(newToDo);
+                input.value = "";
+            }
+        }
+
+        function s() {
+            newToDo.style.backgroundColor = 'red';
+        }
+
+        function removeToDo () {
+            const parent = document.querySelector("#list");
+            parent.removeChild(parent.lastElementChild);
+        }
+    </script>
+</body>
+</html>
